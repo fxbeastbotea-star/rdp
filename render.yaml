@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: website-code-extractor-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_TOKEN
+        sync: false
+      - key: MAX_PAGES
+        value: "40"
+      - key: MAX_FILES
+        value: "250"
+      - key: MAX_TOTAL_MB
+        value: "35"
+      - key: REQUEST_TIMEOUT_MS
+        value: "12000"
+      - key: CRAWL_DELAY_MS
+        value: "800"

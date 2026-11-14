@@ -1,0 +1,20 @@
+{
+  "name": "website-code-extractor-telegram-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot that archives publicly accessible website assets with permission.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "p-limit": "^6.2.0",
+    "robots-parser": "^3.0.1",
+    "telegraf": "^4.16.3"
+  }
+}
